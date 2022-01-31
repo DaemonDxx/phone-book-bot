@@ -1,6 +1,8 @@
 import { FileTemplate } from './file.template';
 
 export class HelpTemplate extends FileTemplate {
+  filename = 'help.txt';
+
   constructor() {
     super(`
 Формат поиска:
@@ -8,7 +10,6 @@ export class HelpTemplate extends FileTemplate {
 - <b>[Фамилия]</b> <b><i>пробел</i></b> <b>[Имя]</b>
 Регистр не важен!
 `);
-    this.filename = 'help.txt';
   }
 
   transformTemplateString(templateString: string): string {

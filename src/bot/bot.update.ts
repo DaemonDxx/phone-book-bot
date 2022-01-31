@@ -17,14 +17,14 @@ import { UnauthorizedFilter } from './common/filters/unauthorized.filter';
 import { UpdaterService } from '../updater/updater.service';
 import { TemplateInterceptor } from './common/interceptors/template.interceptor';
 import { HelpTemplate } from './templates/supportFromFile/help.template';
-import { StartTemplate } from './templates/start.template';
+import { StartTemplate } from './templates/supportFromFile/start.template';
 import { SimpleTextTemplate } from './templates/simpleText.template';
 import { ExtractArgPipe } from './common/pipes/extractArg.pipe';
 import { Query, SessionContext } from './types';
 import { QueryPipe } from './common/pipes/query.pipe';
 import { SelectTemplate } from './templates/select.template';
-import { LoginSuccesfulTemplate } from './templates/login.succesful.template';
-import { InfoTemplate } from './templates/info.template';
+import { LoginSuccesfulTemplate } from './templates/supportFromFile/login.succesful.template';
+import { InfoTemplate } from './templates/supportFromFile/info.template';
 import { EmployeeNotFound } from '../employee/errors/employeeNotFound';
 
 const extractIDFromData = (data: string) => {

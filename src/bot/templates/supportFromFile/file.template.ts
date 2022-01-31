@@ -3,7 +3,7 @@ import * as path from 'path';
 import { SimpleTextTemplate } from '../simpleText.template';
 
 export abstract class FileTemplate extends SimpleTextTemplate {
-  protected filename: string;
+  abstract filename: string;
 
   async getText(): Promise<string> {
     if (!process.env.EXTRACT_TEMPLATE_FROM_FILE) {

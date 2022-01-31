@@ -1,6 +1,8 @@
-import { SimpleTextTemplate } from './simpleText.template';
+import { FileTemplate } from './file.template';
 
-export class StartTemplate extends SimpleTextTemplate {
+export class StartTemplate extends FileTemplate {
+  filename = 'start.txt';
+
   constructor() {
     super();
     this.text = `
@@ -8,5 +10,9 @@ export class StartTemplate extends SimpleTextTemplate {
     
 Для авторизации введите:
 /login <b><i>пробел</i></b> <b>[ВАШ СЕКРЕТНЫЙ КЛЮЧ]</b>`;
+  }
+
+  transformTemplateString(templateString: string): string {
+    return templateString;
   }
 }
