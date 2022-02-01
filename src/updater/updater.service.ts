@@ -17,7 +17,6 @@ export class UpdaterService {
 
   constructor(private readonly employeeService: EmployeeService) {
     this.isNeedUpdateOnStart = !!process.env.UPDATE_AFTER_START;
-    console.log(this.isNeedUpdateOnStart);
   }
 
   async updateDatabase() {
