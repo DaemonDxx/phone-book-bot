@@ -27,7 +27,6 @@ import { ConfigService } from 'daemondxx-nestconfig';
         },
       }),
       autoUpdate: false,
-      updateOnApplicationStart: false,
     }),
     TelegrafModule.forRootAsync({
       botName: process.env.BOT_NAME || 'Test bot',

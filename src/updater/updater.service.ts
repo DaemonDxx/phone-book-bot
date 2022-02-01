@@ -3,19 +3,22 @@ import { Employee } from '../employee/employee.entity';
 import { EmployeeService } from '../employee/employee.service';
 import { InjectSource } from './common/decorators/injectSource.decorator';
 import { DataSource } from '../types/updater/dataSource.interface';
-import { InjectUpdateOption } from './common/decorators/injectUpdateOption.decoreator';
 
 @Injectable()
 export class UpdaterService {
   @InjectSource()
   private readonly source: DataSource;
 
-  @InjectUpdateOption()
+  //TODO сделать внедряемым
+  //@InjectUpdateOption()
   private readonly isNeedUpdateOnStart: boolean;
 
   private readonly logger = console;
 
-  constructor(private readonly employeeService: EmployeeService) {}
+  constructor(private readonly employeeService: EmployeeService) {
+    this.isNeedUpdateOnStart = !!process.env.UPDATE_AFTER_START;
+    console.log(this.isNeedUpdateOnStart);
+  }
 
   async updateDatabase() {
     this.logger.log(`Обновление базы данных...`);
