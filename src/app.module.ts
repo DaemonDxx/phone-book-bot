@@ -15,8 +15,8 @@ const getMongoURI = () => {
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: [
-        '/etc/app/production.env',
-        '/etc/app/development.env',
+        '/etc/bot/production.env',
+        '/etc/bot/development.env',
         './config/production.env',
         './config/development.env',
       ],
