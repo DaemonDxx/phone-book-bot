@@ -2,7 +2,7 @@ name: 'build-prod-image'
 
 on:
   push:
-    branches: ['beta', 'actions']
+    branches: ['beta']
 
 jobs:
   docker:
